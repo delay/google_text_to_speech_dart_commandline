@@ -1,4 +1,18 @@
-class Request {
+class AudioOutputBase64Encoded {
+  String audioContent;
+
+  AudioOutputBase64Encoded({this.audioContent});
+
+  AudioOutputBase64Encoded.fromJson(Map<String, dynamic> json) {
+    audioContent = json['audioContent'];
+  }
+
+  Map<String, dynamic> toJson() => {
+        'audioContent': audioContent,
+      };
+}
+
+/*class Request {
   Input input;
   Voice voice;
   AudioConfig audioConfig;
@@ -67,17 +81,4 @@ class AudioConfig {
         'audioEncoding': audioEncoding,
       };
 }
-
-class AudioOutputBase64Encoded {
-  String audioContent;
-
-  AudioOutputBase64Encoded({this.audioContent});
-
-  AudioOutputBase64Encoded.fromJson(Map<String, dynamic> json) {
-    audioContent = json['audioContent'];
-  }
-
-  Map<String, dynamic> toJson() => {
-        'audioContent': audioContent,
-      };
-}
+*/
