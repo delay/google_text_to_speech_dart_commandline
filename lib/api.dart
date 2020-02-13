@@ -4,15 +4,6 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:meta/meta.dart';
 
-/*
-curl -X POST 
--H "Authorization: Bearer "$(gcloud auth application-default print-access-token) 
--H "Content-Type: application/json; charset=utf-8" 
--d @request.json 
-https://texttospeech.googleapis.com/v1/text:synthesize
-
- */
-
 Future<AudioOutputBase64Encoded> getAudioBase64Output(
     {@required String text, String file = 'output'}) async {
   var body =
